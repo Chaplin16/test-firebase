@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   text-align: center;
   margin: auto;
@@ -16,15 +21,17 @@ article {
   align-items: center;
   max-width: 400px;
   height: 600px;
-  border: 1px solid rgb(133, 131, 131);
+  border: 1px solid #858383;
   border-radius: 8px;
-  background-color: rgb(238, 236, 236);
+  background-color: #eeecec;
 }
+
 article img {
   width: 90%;
   height: auto;
   padding: 15% 0;
 }
+
 article .button {
   text-align: center;
   text-decoration: none;
@@ -37,6 +44,7 @@ article .button {
   width: 60%;
   transition: all 500ms;
 }
+
 article .button:hover {
   background-color: #fff;
   color: #386ca0;
@@ -46,5 +54,4 @@ article .button:hover {
 form {
   display: flex;
 }
-
 /*# sourceMappingURL=style.css.map */
