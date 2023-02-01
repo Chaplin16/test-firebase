@@ -1,0 +1,19 @@
+@mixin button{
+        text-align: center;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 600;
+        background-color: $color-blue;
+        border-color: transparent;
+        color: #fff;
+        padding: 15px;
+        border-radius: 7px;
+        width: 60%;
+        cursor: pointer;
+        transition: all 500ms;
+        &:hover{
+            background-color: #fff;
+            color: #386ca0;
+            border: 1px solid $color-blue;
+        }
+}    

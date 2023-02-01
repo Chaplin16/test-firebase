@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Connection</title>
 </head>
+
 <body>
     <header></header>
-    <main>
+    <main class="main">
+    <div class="container">
         <form action="" method="post" name="form" id="formLogin">
             <div>
                 <h2>Connection</h2>
@@ -34,9 +36,10 @@
         <form action="" method="post" name="form" id="login">
             <div>
                 <h2>Inscription</h2>
-                <p class="username"> 
+                <p class="username">
                     <label for="nameUsername">Votre nom </label>
-                    <input class="input_formulaire" type="text" name="username" id="nameUsername" title="Veuillez n'écrire que des lettres" pattern ="[A-z-_çàâéèeîïù]{2,30}" value="" />
+                    <input class="input_formulaire" type="text" name="username" id="nameUsername"
+                        title="Veuillez n'écrire que des lettres" pattern="[A-z-_çàâéèeîïù]{2,30}" value="" />
                 </p>
                 <p class="email">
                     <label for="emailRecognized">Votre email</label>
@@ -53,16 +56,17 @@
                 <p class="password">
                     <label for="samePassword"> Veuillez confirmer votre mot de passe</label>
                     <input class="input_formulaire" type="password" name="password" id="samePassword"
-                        title="Votre mot de passe n'est pas identique"
-                        placeholder="Votre mot de passe" required />
+                        title="Votre mot de passe n'est pas identique" placeholder="Votre mot de passe" required />
                 </p>
                 <p>
                     <input type="submit" id="btnSubmitNewMember" class="btn_enter" name="submit" value="Envoyer">
                 </p>
             </div>
         </form>
-        <a href="index.html" class="button">RETOUR</button>
+    </div>
+    <a href="index.html" class="return">RETOUR</a>
     </main>
     <footer></footer>
 </body>
+
 </html>
