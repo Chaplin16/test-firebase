@@ -11,31 +11,34 @@
 <body>
     <header></header>
     <main class="main">
-    <div class="container">
-        <form action="" method="post" name="form" id="formLogin">
-            <div>
-                <h2>Connection</h2>
-                <p class="email">
-                    <label for="email">Votre email</label>
-                    <input type="email" name="email" id="email"
-                        title="Veuillez écrire un mail valide" pattern="[a-zA-Z0-9.]+@[a-zA-Z0-9.-]{2,}\.[a-zA-Z]{2,4}$"
-                        placeholder="Votre email" required />
-                </p>
-                <p class="password">
-                    <label for="password"> Votre mot de passe</label>
-                    <input type="password" name="password" id="password" 
-                        title="Votre mot de passe doit contenir entre 8 et 20 caractères dont 1 chiffre, une minuscule, une majuscule et  pas de caractère spéciaux"
-                        pattern="[A-z-_0123456789]{8,20}"
-                        placeholder="Votre mot de passe" required />
-                </p>
-                <p>
-                    <input type="submit" id="btnSubmit" class="btn_enter" name="submit" value="ENVOYEZ">
-                </p>
-            </div>
-        </form>
-       
-    </div>
-    <a href="index.html" class="return">RETOUR</a>
+        <div class="connect">
+            <a href="resetPassword.html" class="linkReset">Mot de passe oublié?</a>
+        </div>
+        <div class="container">
+            <form action="" method="post" name="form" id="formLogin">
+                <div>
+                    <h2>Connection</h2>
+                    <p class="email">
+                        <label for="email">Votre email</label>
+                        <input type="email" name="email" id="email"
+                            title="Veuillez écrire un mail valide" pattern="[a-zA-Z0-9.]+@[a-zA-Z0-9.-]{2,}\.[a-zA-Z]{2,4}$"
+                            placeholder="Votre email" required />
+                    </p>
+                    <p class="password">
+                        <label for="password"> Votre mot de passe</label>
+                        <input type="password" name="password" id="password" 
+                            title="Votre mot de passe doit contenir entre 8 et 20 caractères dont 1 chiffre, une minuscule, une majuscule et  pas de caractère spéciaux"
+                            pattern="[A-z-_0123456789]{8,20}"
+                            placeholder="Votre mot de passe" required />
+                    </p>
+                    <p>
+                        <input type="submit" id="btnSubmit" class="btn_enter" name="submit" value="ENVOYEZ">
+                    </p>
+                </div>
+            </form>
+        
+        </div>
+        <a href="index.html" class="return">RETOUR</a>
     </main>
     <footer></footer>
 

@@ -12,7 +12,23 @@ h1 {
   font-size: 35px;
 }
 
-.buttonConnect {
+.connect {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  column-gap: 1rem;
+}
+.connect .linkReset {
+  text-decoration: none;
+  color: rgb(139, 74, 139);
+  max-width: 7rem;
+  text-align: center;
+}
+.connect .linkReset:hover {
+  text-decoration: underline;
+  color: #123456;
+}
+.connect .buttonConnect {
   text-align: center;
   text-decoration: none;
   font-size: 18px;
@@ -23,10 +39,10 @@ h1 {
   border-radius: 7px;
   cursor: pointer;
   transition: all 500ms;
-  float: right;
   background-color: #ced0d1;
+  margin: 3px;
 }
-.buttonConnect:hover {
+.connect .buttonConnect:hover {
   background-color: #fff;
   border: 1px solid #ced0d1;
 }
@@ -109,7 +125,7 @@ h1 {
   border-radius: 7px;
   cursor: pointer;
   transition: all 500ms;
-  margin-left: 46%;
+  margin-left: 37.5%;
   background-color: #438f99;
   color: #fff;
 }
