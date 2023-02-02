@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getAnalytics } from "firebase/analytics";
-// TODO: Replace the following with your app's Firebase project configuration
+
 const firebaseConfig = {
     apiKey: "AIzaSyBgqAF4dI6X_VGuLTxBvv0c-hJ5ZX0wj1I",
     authDomain: "fir-oc-c824f.firebaseapp.com",
@@ -14,4 +14,3 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-app.use(express.static(__dirname + '/public/'));

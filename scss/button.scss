@@ -1,19 +1,16 @@
-@mixin button{
+@mixin buttonConnect{
         text-align: center;
         text-decoration: none;
-        font-size: 1rem;
-        font-weight: 600;
-        background-color: $color-blue;
-        border-color: transparent;
-        color: #fff;
-        padding: 15px;
+        font-size: 18px;
+        font-weight: 700;
+        border: 1px solid $color-grey;
+        color: #000;
+        padding: 10px;
         border-radius: 7px;
-        width: 60%;
         cursor: pointer;
         transition: all 500ms;
         &:hover{
             background-color: #fff;
-            color: #386ca0;
-            border: 1px solid $color-blue;
+            border: 1px solid $color-grey;
         }
 }    

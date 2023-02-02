@@ -23,13 +23,13 @@
                 </p>
                 <p class="password">
                     <label for="password"> Votre mot de passe</label>
-                    <input type="password" name="password" id="password"
+                    <input type="password" name="password" id="password" 
                         title="Votre mot de passe doit contenir entre 8 et 20 caractères dont 1 chiffre, une minuscule, une majuscule et  pas de caractère spéciaux"
-                        pattern="/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/"
+                        pattern="[A-z-_0123456789]{8,20}"
                         placeholder="Votre mot de passe" required />
                 </p>
                 <p>
-                    <input type="submit" id="btnSubmit" class="btn_enter" name="submit" value="Envoyer">
+                    <input type="submit" id="btnSubmit" class="btn_enter" name="submit" value="ENVOYEZ">
                 </p>
             </div>
         </form>
@@ -38,6 +38,8 @@
     <a href="index.html" class="return">RETOUR</a>
     </main>
     <footer></footer>
+
+    <script type="module" src="js/connect.js"></script>
 </body>
 
 </html>

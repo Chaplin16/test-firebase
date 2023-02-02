@@ -8,46 +8,27 @@ h1 {
   margin: auto;
   padding: 5rem 0;
   max-width: 450px;
-  color: #386ca0;
+  color: #438f99;
   font-size: 35px;
 }
 
-article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 20px;
-  margin: auto;
-  align-items: center;
-  max-width: 400px;
-  height: 450px;
-  border: 1px solid rgb(133, 131, 131);
-  border-radius: 8px;
-  background-color: rgb(238, 236, 236);
-}
-article img {
-  width: 90%;
-  height: auto;
-  padding: 15% 0;
-}
-article .button {
+.buttonConnect {
   text-align: center;
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 600;
-  background-color: #386ca0;
-  border-color: transparent;
-  color: #fff;
-  padding: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  border: 1px solid #ced0d1;
+  color: #000;
+  padding: 10px;
   border-radius: 7px;
-  width: 60%;
   cursor: pointer;
   transition: all 500ms;
+  float: right;
+  background-color: #ced0d1;
 }
-article .button:hover {
+.buttonConnect:hover {
   background-color: #fff;
-  color: #386ca0;
-  border: 1px solid #386ca0;
+  border: 1px solid #ced0d1;
 }
 
 .container {
@@ -59,6 +40,7 @@ article .button:hover {
   flex-wrap: wrap;
 }
 .container form {
+  text-align: center;
   border: 1px solid #000;
   padding: 2rem;
   margin-bottom: 7rem;
@@ -69,17 +51,23 @@ article .button:hover {
   position: relative;
 }
 .container form h2 {
-  color: #386ca0;
+  color: #438f99;
   padding: 1rem 0;
 }
 .container form label {
   display: block;
   padding-bottom: 3px;
+  text-align: left;
 }
 .container form input {
+  width: 100%;
   padding: 3px 0;
   border-radius: 5px;
   border-color: transparent;
+}
+.container form input:focus {
+  outline: none;
+  background-color: rgba(162, 206, 223, 0.705);
 }
 .container form p {
   padding-bottom: 1rem;
@@ -87,45 +75,54 @@ article .button:hover {
 .container form .btn_enter {
   text-align: center;
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 600;
-  background-color: #386ca0;
-  border-color: transparent;
-  color: #fff;
-  padding: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  border: 1px solid #ced0d1;
+  color: #000;
+  padding: 10px;
   border-radius: 7px;
-  width: 60%;
   cursor: pointer;
   transition: all 500ms;
   position: absolute;
   bottom: 30px;
   left: 20%;
+  width: 60%;
+  background-color: #438f99;
+  color: #fff;
 }
 .container form .btn_enter:hover {
   background-color: #fff;
-  color: #386ca0;
-  border: 1px solid #386ca0;
+  border: 1px solid #ced0d1;
+}
+.container form .btn_enter:hover {
+  color: #438f99;
 }
 
 .return {
   text-align: center;
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: 600;
-  background-color: #386ca0;
-  border-color: transparent;
-  color: #fff;
-  padding: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  border: 1px solid #ced0d1;
+  color: #000;
+  padding: 10px;
   border-radius: 7px;
-  width: 60%;
   cursor: pointer;
   transition: all 500ms;
   margin-left: 46%;
+  background-color: #438f99;
+  color: #fff;
 }
 .return:hover {
   background-color: #fff;
-  color: #386ca0;
-  border: 1px solid #386ca0;
+  border: 1px solid #ced0d1;
+}
+.return:hover {
+  color: #438f99;
+}
+
+.formModifPassword {
+  height: 22rem !important;
 }
 
 /*# sourceMappingURL=style.css.map */
