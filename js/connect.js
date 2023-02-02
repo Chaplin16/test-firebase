@@ -24,7 +24,7 @@ btnSubmitMember.addEventListener("click", function (event) {
                 let user = new User(json.user);
                 user.save(json.token);
             
-            window.location.assign("pageTchats.html")
+            window.location.assign("index.html")
             }).catch(function (err) {
                 console.log('Il n y a personne d identifier avec ce mail' + err.message);
             })
