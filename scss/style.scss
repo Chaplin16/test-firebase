@@ -92,17 +92,14 @@ h1{
     }
 } 
 
-.return{
-    @include buttonConnect;
-    margin-left: 37.5%;
-    background-color: $color-blue;
-    color: #fff;
-    &:hover{
-        color: $color-blue;
+.back{
+    text-align: center;
+    &-btn{
+        @include buttonConnect;
+        background-color: $color-blue;
+        color: #fff;
+        &:hover{
+            color: $color-blue;
+        }
     }
-}
-
-//PAGE MODIFPASSWORD.HTML
-.formModifPassword{
-    height:22rem!important;
 }

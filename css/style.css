@@ -114,7 +114,10 @@ h1 {
   color: #438f99;
 }
 
-.return {
+.back {
+  text-align: center;
+}
+.back-btn {
   text-align: center;
   text-decoration: none;
   font-size: 18px;
@@ -125,20 +128,15 @@ h1 {
   border-radius: 7px;
   cursor: pointer;
   transition: all 500ms;
-  margin-left: 37.5%;
   background-color: #438f99;
   color: #fff;
 }
-.return:hover {
+.back-btn:hover {
   background-color: #fff;
   border: 1px solid #ced0d1;
 }
-.return:hover {
+.back-btn:hover {
   color: #438f99;
-}
-
-.formModifPassword {
-  height: 22rem !important;
 }
 
 /*# sourceMappingURL=style.css.map */
