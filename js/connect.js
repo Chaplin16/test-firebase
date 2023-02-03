@@ -14,18 +14,19 @@ btnSubmit.addEventListener("click", function (event) {
     //verification si le formulaire est correctement rempli
     let contact = {
       // je cree un objet avec les valeurs que je recupere par les id
+      username: document.getElementById("username").value,
       email: document.getElementById("email").value,
       password: document.getElementById("password").value,
     };
     
     //j'envoie des données au serveur
-    signInWithEmailAndPassword(auth, contact.email, contact.password)
+    signInWithEmailAndPassword(auth,contact.email, contact.password)
       .then((userCredential) => {
-        
         const user = userCredential.user;
         console.log(user)
         alert("Vous êtes connecté 👍")
-        sessionStorage.setItem("user", JSON.stringify(user));     
+        sessionStorage.setItem("user", JSON.stringify(user));  
+        sessionStorage.setItem("name",JSON.stringify(contact.username));  
         window.location.assign("index.html")
  
       })
