@@ -18,6 +18,12 @@
             <form action="" method="post" name="form" id="formLogin">
                 <div>
                     <h2>Connection</h2>
+                    <p class="username">
+                        <label for="username">Votre prénom</label>
+                        <input type="text" name="username" id="username"
+                            title="Veuillez écrire votre prénom" pattern ="[A-z-_ çàâéèeîïù]{2,30}"
+                            placeholder="Votre prénom" required />
+                    </p>
                     <p class="email">
                         <label for="email">Votre email</label>
                         <input type="email" name="email" id="email"
