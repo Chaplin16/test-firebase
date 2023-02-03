@@ -25,6 +25,7 @@ btnSubmit.addEventListener("click", function (event) {
         const user = userCredential.user;
         console.log(user)
         alert("Vous êtes connecté 👍")
+        sessionStorage.setItem("user", JSON.stringify(user));     
         window.location.assign("index.html")
  
       })
