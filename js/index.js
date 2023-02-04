@@ -14,10 +14,10 @@ if(user != null){
 let iconMenu = document.getElementById("iconMenu");
 let disconnect = document.getElementById("disconnect");
 iconMenu.addEventListener("click", function() {
-    if(disconnect.style.display == "none"){
-       disconnect.style.display = "block"
+    if(disconnect.style.visibility == "hidden"){
+       disconnect.style.visibility = "visible"
     } else {
-        disconnect.style.display = "none"
+        disconnect.style.visibility = "hidden"
     }
 });
 
