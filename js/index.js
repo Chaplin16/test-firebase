@@ -1,5 +1,6 @@
 let user = JSON.parse(sessionStorage.getItem("username"));
 let connect = document.getElementById("connect");
+let changePhotoCarousel = document.getElementById("changePhotoCarouel")
 
 //appear username connected's name 
 if(user != null){
@@ -11,6 +12,7 @@ if(user != null){
         </div>
         <button id="disconnect">Se déconnecter</button>
     </div>`
+
 }
 
 //appear btn disconnected 
