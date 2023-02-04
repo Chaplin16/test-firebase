@@ -12,23 +12,24 @@ h1 {
   font-size: 35px;
 }
 
-.connect {
+.btn {
   display: flex;
   align-items: center;
   justify-content: end;
   column-gap: 1rem;
 }
-.connect .linkReset {
+.btn-reset {
   text-decoration: none;
   color: rgb(139, 74, 139);
   max-width: 7rem;
   text-align: center;
+  padding-top: 5px;
 }
-.connect .linkReset:hover {
+.btn-reset:hover {
   text-decoration: underline;
   color: #123456;
 }
-.connect .buttonConnect {
+.btn-connect {
   text-align: center;
   text-decoration: none;
   font-size: 18px;
@@ -42,9 +43,29 @@ h1 {
   background-color: #ced0d1;
   margin: 3px;
 }
-.connect .buttonConnect:hover {
+.btn-connect:hover {
   background-color: #fff;
   border: 1px solid #ced0d1;
+}
+
+#user {
+  text-transform: capitalize;
+  color: #000;
+  padding: 5px 5px 0 0;
+}
+#user img {
+  margin-bottom: -2px;
+}
+
+#disconnect {
+  background-color: #3f566d;
+  color: #fff;
+  border: none;
+  padding: 4px 10px;
+  margin-top: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  display: none;
 }
 
 .container {
@@ -84,6 +105,9 @@ h1 {
 .container form input:focus {
   outline: none;
   background-color: rgba(162, 206, 223, 0.705);
+}
+.container form #username {
+  text-transform: capitalize;
 }
 .container form p {
   padding-bottom: 1rem;

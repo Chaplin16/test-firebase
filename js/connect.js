@@ -20,7 +20,6 @@ btnSubmit.addEventListener('click', function(event) {
     signInWithEmailAndPassword(auth,contact.email, contact.password)
         .then((userCredential) => {
           const user = userCredential.user;
-          alert("vous êtes connecté 👍")
           sessionStorage.setItem("user", JSON.stringify(user));  
           sessionStorage.setItem("username",JSON.stringify(contact.username));  
           window.location.assign("../index.html")  
