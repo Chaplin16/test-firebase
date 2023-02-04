@@ -48,6 +48,10 @@ h1 {
   border: 1px solid #ced0d1;
 }
 
+.carousel-slick img {
+  object-fit: contain;
+}
+
 #user {
   text-transform: capitalize;
   color: #000;

@@ -37,6 +37,9 @@ h1{
     } 
 }
  
+.carousel-slick img{
+    object-fit: contain;
+}
 //DOM OF INDEX.HTML
 #user{
     text-transform: capitalize;
