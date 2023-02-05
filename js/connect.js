@@ -1,5 +1,5 @@
 import { auth } from "../backend/firebase/auth.js";
-import { signInWithEmailAndPassword  } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
+import { signInWithEmailAndPassword  } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 
 let btnSubmit = document.getElementById("btnSubmit");
 //save in the bdd

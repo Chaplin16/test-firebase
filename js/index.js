@@ -1,9 +1,10 @@
 let user = JSON.parse(sessionStorage.getItem("username"));
 let connect = document.getElementById("connect");
-let changePhotoCarousel = document.getElementById("changePhotoCarouel")
 
 //appear username connected's name 
 if(user != null){
+    let changePhotoCarousel = document.getElementById("changePhotoCarousel")
+    let imgSend = document.getElementById("imgSend")
     connect.innerHTML = `   
     <div>
         <div id="user">
@@ -13,6 +14,13 @@ if(user != null){
         <button id="disconnect">Se déconnecter</button>
     </div>`
 
+    changePhotoCarousel.style.visibility = "visible";
+
+    imgSend.addEventListener('click', function(event) {
+        const file = document.getElementById('selectImg').files[0];
+        event.preventDefault();
+
+    });
 }
 
 //appear btn disconnected 

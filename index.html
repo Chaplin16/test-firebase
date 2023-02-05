@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="js/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css" />
     <title>Boutique Firebase</title>
 </head>
 
@@ -20,22 +20,30 @@
     <main>
         <h1> Essai pour une application basique avec FIREBASE </h1>
 
-        <div class="">
-            <div id="recipeCarousel" class="carousel slide " data-bs-ride="carousel">
-                <div class="carousel-slick" role="listbox">
-                    <!-- insertion via index-carousel.js -->
-                </div>
+        <div id="recipeCarousel" class="carousel slide " data-bs-ride="carousel">
+            <div class="carousel-slick" role="listbox">
+                <!-- insertion via index-carousel.js -->
             </div>
         </div>
-        <button class="changePhotoCarousel" id="changePhotoCarousel">Changer les photos</button>
+
+        <div id="changePhotoCarousel">
+            <label for="selectImg"></label>
+            <input type="file" accept="image/png, image/jpeg" class="selectImg" id="selectImg" />
+            <input type="submit" class="imgSend" id="imgSend" name="submit" value="ok"/>
+        </div>
        
+
+        
     </main>
     <footer></footer>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="js/slick/slick.min.js"></script>
-    <script type="module" src="js/index.js"></script> 
-    <script type="module" src="js/index-carousel.js"></script> 
+    <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/index-carousel.js"></script>
 
 </body>
 

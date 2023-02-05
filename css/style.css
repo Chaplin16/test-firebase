@@ -48,7 +48,10 @@ h1 {
   border: 1px solid #ced0d1;
 }
 
-.carousel-slick img {
+.carousel {
+  max-width: 100%;
+}
+.carousel .carousel-slick img {
   object-fit: contain;
 }
 
@@ -67,14 +70,56 @@ h1 {
 }
 
 #disconnect {
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  border: 1px solid #ced0d1;
+  color: #000;
+  padding: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 500ms;
   background-color: #3f566d;
   color: #fff;
-  border: none;
-  padding: 4px 10px;
-  margin-top: 5px;
-  border-radius: 3px;
+  padding: 4px 8px;
   cursor: pointer;
   visibility: hidden;
+}
+#disconnect:hover {
+  background-color: #fff;
+  border: 1px solid #ced0d1;
+}
+#disconnect:hover {
+  background-color: #fff;
+  color: #3f566d;
+  border: 1px solid #3f566d;
+}
+
+#changePhotoCarousel {
+  float: right;
+  margin-right: 18px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  border: 1px solid #ced0d1;
+  color: #000;
+  padding: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 500ms;
+  background-color: #3f566d;
+  color: #fff;
+  visibility: hidden;
+}
+#changePhotoCarousel:hover {
+  background-color: #fff;
+  border: 1px solid #ced0d1;
+}
+#changePhotoCarousel:hover {
+  color: #3f566d;
+  border: 1px solid #3f566d;
 }
 
 .container {

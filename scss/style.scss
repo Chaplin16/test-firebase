@@ -37,9 +37,13 @@ h1{
     } 
 }
  
-.carousel-slick img{
-    object-fit: contain;
+.carousel{
+    max-width: 100%;
+    & .carousel-slick img{
+        object-fit: contain;
+    }
 }
+
 //DOM OF INDEX.HTML
 #user{
     text-transform: capitalize;
@@ -56,16 +60,31 @@ h1{
 }
 
 #disconnect {
-    background-color: #3f566d;
+    @include buttonConnect;
+    background-color: $color-blue-grey;
     color: #fff;
-    border: none;
-    padding: 4px 10px;
-    margin-top:5px;
-    border-radius: 3px;
+    padding: 4px 8px;
     cursor: pointer;
     visibility: hidden;
+    &:hover{
+        background-color: #fff;
+        color: $color-blue-grey;
+        border: 1px solid $color-blue-grey;
+    }
 }
 
+#changePhotoCarousel{
+    float:right; 
+    margin-right:18px;
+    @include buttonConnect;
+    background-color: $color-blue-grey;
+    color: #fff;
+    visibility: hidden;
+    &:hover{
+        color: $color-blue-grey;
+        border: 1px solid $color-blue-grey;
+    }
+}
 
 // PAGE CONNECT.HTML
 .container{

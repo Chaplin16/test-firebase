@@ -74,7 +74,7 @@ function carousel(selector, data) {
             {
                 breakpoint: 1650,
                 settings: {
-                    centerPadding: '40px',
+                    centerPadding: '20px',
                     slidesToShow: 3,
                     dots:true,
                 }
