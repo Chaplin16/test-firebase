@@ -44,6 +44,31 @@ h1{
     }
 }
 
+.text{
+
+    max-width:90%;
+    margin: 8rem auto;
+}
+
+.vitrine{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap:10px;
+    row-gap:10px;
+    img{
+        width:200px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 3px 3px 3px #123456;
+    }
+}
+
+
+.space{
+    margin-top:10rem;
+}
 //DOM OF INDEX.HTML
 #user{
     text-transform: capitalize;
@@ -73,17 +98,22 @@ h1{
     }
 }
 
-#changePhotoCarousel{
+#changePhotoCarousel,
+#changePhotoGallery{
     float:right; 
     margin-right:18px;
     @include buttonConnect;
     background-color: $color-blue-grey;
     color: #fff;
-    visibility: hidden;
+    
     &:hover{
         color: $color-blue-grey;
         border: 1px solid $color-blue-grey;
     }
+}
+
+#changePhotoGallery{
+ margin-top:30px;
 }
 
 // PAGE CONNECT.HTML

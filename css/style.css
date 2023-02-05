@@ -55,6 +55,30 @@ h1 {
   object-fit: contain;
 }
 
+.text {
+  max-width: 90%;
+  margin: 8rem auto;
+}
+
+.vitrine {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.vitrine img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 3px 3px 3px #123456;
+}
+
+.space {
+  margin-top: 10rem;
+}
+
 #user {
   text-transform: capitalize;
   color: #000;
@@ -96,7 +120,8 @@ h1 {
   border: 1px solid #3f566d;
 }
 
-#changePhotoCarousel {
+#changePhotoCarousel,
+#changePhotoGallery {
   float: right;
   margin-right: 18px;
   text-align: center;
@@ -111,15 +136,20 @@ h1 {
   transition: all 500ms;
   background-color: #3f566d;
   color: #fff;
-  visibility: hidden;
 }
-#changePhotoCarousel:hover {
+#changePhotoCarousel:hover,
+#changePhotoGallery:hover {
   background-color: #fff;
   border: 1px solid #ced0d1;
 }
-#changePhotoCarousel:hover {
+#changePhotoCarousel:hover,
+#changePhotoGallery:hover {
   color: #3f566d;
   border: 1px solid #3f566d;
+}
+
+#changePhotoGallery {
+  margin-top: 30px;
 }
 
 .container {
