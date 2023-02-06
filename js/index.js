@@ -23,11 +23,12 @@ if(user != null){
         function isValidName(e) {
             return !(/\.(png|jpeg|jpg|JPG|JPEG|PNG)$/i).test(e);
         };
-        if (!isValidName(fileName) == true){
-            alert("Votre fichier image doit être au format .jpg, .jpeg ou .png")
-            return false
+        if (isValidName(fileName.name)){
+            alert(`votre fichier "${fileName.name}" est pris en compte`)
+            
+        }else{
+            alert(`Votre fichier image "${fileName.name}" doit être au format .jpg, .jpeg ou .png`);  
         }
-        alert(`votre fichier "${fileName.name}" est pris en compte`);
         fileName.name = " "
     });
 
@@ -40,14 +41,15 @@ if(user != null){
         const fileNameGallery = document.getElementById('selectImgGallery').files[0];
         event.preventDefault();
         function isValidName(e) {
-            return !(/\.(png|jpeg|jpg|JPG|JPEG|PNG)$/i).test(e);
+            return (/\.(png|jpeg|jpg|JPG|JPEG|PNG)$/i).test(e);
         };
     
-        if (!isValidName(fileNameGallery) == true){
-            alert("Votre fichier image doit être au format .jpg, .jpeg ou .png")
-            return false
+        if (isValidName(fileNameGallery.name)){
+            alert(`votre fichier "${fileNameGallery.name}" est pris en compte`)
+            
+        }else{
+            alert(`Votre fichier image "${fileNameGallery.name}" doit être au format .jpg, .jpeg ou .png`);  
         }
-        alert(`votre fichier "${fileNameGallery.name}" est pris en compte`)
 
         fileNameGallery.name="";
     })  
