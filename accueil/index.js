@@ -3,10 +3,13 @@ let connect = document.getElementById("connect");
 
 //appear username connected's name 
 if(user != null){
+    
+   let name = user.firstname != null ? user.firstname : user.email
+
     connect.innerHTML = `   
     <div>
         <div id="user">
-            Bonjour ${user.firstname} 
+            Bonjour ${name}
             <img id="navIcon" src="../images/icon-arrow-menu.png" alt="icone menu déroulant"> 
         </div>
         <div class="navConnect">
@@ -44,7 +47,7 @@ if(icon != null){
 
 if(updateProfil != null) {
     updateProfil.addEventListener('click', function() {
-        window.location = "profil.html";
+        window.location = "../login/profil.html";
     })
 }
 

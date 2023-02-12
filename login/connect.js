@@ -18,7 +18,7 @@ document.getElementById("btnSubmit").addEventListener('click', function(event) {
     signInWithEmailAndPassword(auth,contact.email, contact.password)
         .then((userCredential) => {
           localStorage.setItem("user", JSON.stringify(userCredential.user));  
-          window.location.assign("../index.html")  
+          window.location.assign("../accueil/index.html")  
           })
       .catch((error) => {
           email.style.border = "1px solid red";
