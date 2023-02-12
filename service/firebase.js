@@ -1,4 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
+import { getFirestore } from 'https://cdnjs.cloudflare.com/ajax/libs/firebase/9.16.0/firebase-firestore-lite.min.js';
 import { getAuth } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
 
 const firebaseConfig = {
@@ -11,11 +12,10 @@ const firebaseConfig = {
     measurementId: "G-6HMD1ZW3NC"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
-
-
+const firebase = getFirestore(app);
 // Initialize Firebase Authentication and get a reference to the service
 const auth = getAuth(app);
 
-export {app, auth};
+export { app, auth, firebase };

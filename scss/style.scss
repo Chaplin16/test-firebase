@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
 } 
-
+ //INDEX.HTML
 h1{
     text-align: center;
     margin:auto;
@@ -65,10 +65,10 @@ h1{
     }
 }
 
-
 .space{
     margin-top:10rem;
 }
+
 //DOM OF INDEX.HTML
 #user{
     text-transform: capitalize;
@@ -83,18 +83,25 @@ h1{
         margin: -1em; 
     }
 }
-
-#disconnect {
-    @include buttonConnect;
-    background-color: $color-blue-grey;
-    color: #fff;
-    padding: 4px 8px;
-    cursor: pointer;
-    visibility: hidden;
-    &:hover{
-        background-color: #fff;
-        color: $color-blue-grey;
-        border: 1px solid $color-blue-grey;
+.navConnect{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    row-gap: 3px;
+    #navDisconnect,
+    #navUpdateProfil {
+        @include buttonConnect;
+        background-color: $color-blue-grey;
+        font-size: 14px;
+        color: #fff;
+        padding: 4px 8px;
+        cursor: pointer;
+        visibility: hidden;
+        &:hover{
+            background-color: #fff;
+            color: $color-blue-grey;
+            border: 1px solid $color-blue-grey;
+        }
     }
 }
 
@@ -105,7 +112,7 @@ h1{
     @include buttonConnect;
     background-color: $color-blue-grey;
     color: #fff;
-    
+    visibility: hidden;
     &:hover{
         color: $color-blue-grey;
         border: 1px solid $color-blue-grey;
@@ -141,20 +148,19 @@ h1{
         label{
             display: block;
             padding-bottom:3px;
+            padding-left: 2px;
             text-align: left;
         }
         input{
             width:100%;
-            padding: 3px 0;
+            padding: 5px 0;
             border-radius: 5px;
             border-color: transparent;
+            padding-left:3px;
             &:focus{
                 outline: none;
                 background-color: rgba(162, 206, 223, 0.705);
             }
-        }
-        #username{
-            text-transform: capitalize;
         }
         p{
             padding-bottom: 1rem;
@@ -172,6 +178,10 @@ h1{
             }
         }
     }
+    & .error-message{
+        display: none;
+        color: red;
+    }
 } 
 
 .back{
@@ -184,4 +194,16 @@ h1{
             color: $color-blue;
         }
     }
+}
+
+//RESETPASSWORD.HTML
+#reset-password-wrong{
+    display: none; 
+    color : red;
+}
+#reset-password{
+    display: none; 
+    color: $color-blue;
+    font-weight: 600;
+    padding-top:15px;
 }

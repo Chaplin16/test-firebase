@@ -93,7 +93,14 @@ h1 {
   margin: -1em;
 }
 
-#disconnect {
+.navConnect {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  row-gap: 3px;
+}
+.navConnect #navDisconnect,
+.navConnect #navUpdateProfil {
   text-align: center;
   text-decoration: none;
   font-size: 18px;
@@ -105,16 +112,19 @@ h1 {
   cursor: pointer;
   transition: all 500ms;
   background-color: #3f566d;
+  font-size: 14px;
   color: #fff;
   padding: 4px 8px;
   cursor: pointer;
   visibility: hidden;
 }
-#disconnect:hover {
+.navConnect #navDisconnect:hover,
+.navConnect #navUpdateProfil:hover {
   background-color: #fff;
   border: 1px solid #ced0d1;
 }
-#disconnect:hover {
+.navConnect #navDisconnect:hover,
+.navConnect #navUpdateProfil:hover {
   background-color: #fff;
   color: #3f566d;
   border: 1px solid #3f566d;
@@ -136,6 +146,7 @@ h1 {
   transition: all 500ms;
   background-color: #3f566d;
   color: #fff;
+  visibility: hidden;
 }
 #changePhotoCarousel:hover,
 #changePhotoGallery:hover {
@@ -178,20 +189,19 @@ h1 {
 .container form label {
   display: block;
   padding-bottom: 3px;
+  padding-left: 2px;
   text-align: left;
 }
 .container form input {
   width: 100%;
-  padding: 3px 0;
+  padding: 5px 0;
   border-radius: 5px;
   border-color: transparent;
+  padding-left: 3px;
 }
 .container form input:focus {
   outline: none;
   background-color: rgba(162, 206, 223, 0.705);
-}
-.container form #username {
-  text-transform: capitalize;
 }
 .container form p {
   padding-bottom: 1rem;
@@ -221,6 +231,10 @@ h1 {
 .container form .btn_enter:hover {
   color: #438f99;
 }
+.container .error-message {
+  display: none;
+  color: red;
+}
 
 .back {
   text-align: center;
@@ -245,6 +259,18 @@ h1 {
 }
 .back-btn:hover {
   color: #438f99;
+}
+
+#reset-password-wrong {
+  display: none;
+  color: red;
+}
+
+#reset-password {
+  display: none;
+  color: #438f99;
+  font-weight: 600;
+  padding-top: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

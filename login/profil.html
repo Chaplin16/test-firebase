@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>Modification du profil</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="container">
+            <form action="" method="post" name="form" id="updateProfil" class="updateProfil">
+                <div>
+                    <h2>Modifier votre prénom </h2>
+                    <p class="username">
+                        <label for="username">Votre prénom</label>
+                        <input type="text" name="firstname" id="firstname"      minLength="2" pattern ="[A-z-_ çàâéèeîïù]{2,30}"
+                        placeholder="Votre prénom" required />
+                    </p>
+                    <p>
+                        <input id="save" class="btn_enter" value="ENREGISTRER">
+                    </p>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer></footer>
+    <script type="module" src="profil.js"></script>
+</body>
+
+</html>
