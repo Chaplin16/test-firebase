@@ -48,10 +48,10 @@ h1 {
   border: 1px solid #ced0d1;
 }
 
-.carousel {
+.carousel-slick {
   max-width: 100%;
 }
-.carousel .carousel-slick img {
+.carousel-slick .carousel img {
   object-fit: contain;
 }
 
