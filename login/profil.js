@@ -1,7 +1,9 @@
-import { updateUser } from "../service/user.js";
+import { getOneUser, updateUser } from "../service/user.js";
 
-document.querySelector("#save").addEventListener("click", function() {
+document.querySelector("#save").addEventListener("click", async function() {
     let user = JSON.parse(localStorage.getItem("user"));
-    updateUser(user.uid, document.querySelector("#firstname").value);
+    let firstName = await updateUser(user.uid, document.querySelector("#displayName").value);
+
+    firstName = user.displayName; 
 
 });

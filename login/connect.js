@@ -23,10 +23,9 @@ document.getElementById("btnSubmit").addEventListener('click', function(event) {
           let user = await getOneUser(userCredential.user.uid)
 
           if(!user){
-            await createUser({firstname:null,idauth:userCredential.user.uid})  
+            await createUser({displayName:null,idauth:userCredential.user.uid})  
           }     
-          // let userName = user.firstname; 
-  
+        
           window.location.assign("../accueil/index.html")  
           })
       .catch((error) => {

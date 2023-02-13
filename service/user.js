@@ -17,13 +17,23 @@ const createUser = async(user) => {
     await addDoc(userCollection, user);
 }
 
-const updateUser = async(idauth, firstname) => {
+const updateUser = async(idauth, displayName) => {
     let q = await query(userCollection, where("idauth", "==", idauth));
     let docs = await getDocs(q);
     let user = docs._docs[0].ref;
-    updateDoc(user, {
-        firstname: firstname
+    await updateDoc(user, {
+        displayName: displayName
     });
-}
+    let newName = await getOneUser(idauth);
+        return newName
+
+
+};
+
+
+
+
+
+
 
 export { getAllUser, getOneUser, createUser, updateUser };

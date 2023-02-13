@@ -1,11 +1,10 @@
 let user = JSON.parse(localStorage.getItem("user"));
 let connect = document.getElementById("connect");
-let nameUser = JSON.parse(localStorage.getItem("firstname"));
+let nameUser = document.getElementById("displayName");
 //appear username connected's name 
 if(user != null){
-    
-   nameUser = user.firstname != null ? user.firstname : user.email
-
+   nameUser = nameUser != null ? nameUser : user.email
+ console.log(user.displayName);
     connect.innerHTML = `   
     <div>
         <div id="user">
