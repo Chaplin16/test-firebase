@@ -1,4 +1,5 @@
 // CHANGE PHOTOS CAROUSEL
+import { getStorage, ref, uploadBytes } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-storage.js";
 
 let imgSendCarousel = document.getElementById("imgSendCarousel");
 
@@ -15,6 +16,14 @@ imgSendCarousel.addEventListener('click', function(event) {
     }else{
         alert(`Votre fichier image "${fileName.name}" doit être au format .jpg, .jpeg ou .png`);  
     }
+    
+    const storage = getStorage();
+    const storageRef = ref(storage, `carousel/${fileName}`);
+
+    uploadBytes(storageRef, file).then((snapshot) => {
+        console.log('Uploaded a blob or file!');
+      });
+
     fileNameInput.value = " "
 });
 

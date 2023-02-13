@@ -1,8 +1,10 @@
 import { auth } from "../service/firebase.js";
 import { signInWithEmailAndPassword  } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
+import { createUser, getOneUser } from "../service/user.js";
 let email = document.getElementById("email");
 let password = document.querySelector("#password");
 let errorMessage = document.querySelector(".error-message");
+
 
 document.getElementById("btnSubmit").addEventListener('click', function(event) {
   let formLogin = document.getElementById("formLogin");
@@ -16,8 +18,15 @@ document.getElementById("btnSubmit").addEventListener('click', function(event) {
     
     //j'envoie des données au serveur
     signInWithEmailAndPassword(auth,contact.email, contact.password)
-        .then((userCredential) => {
+        .then(async(userCredential) => {
           localStorage.setItem("user", JSON.stringify(userCredential.user));  
+          let user = await getOneUser(userCredential.user.uid)
+
+          if(!user){
+            await createUser({firstname:null,idauth:userCredential.user.uid})  
+          }     
+          // let userName = user.firstname; 
+  
           window.location.assign("../accueil/index.html")  
           })
       .catch((error) => {
