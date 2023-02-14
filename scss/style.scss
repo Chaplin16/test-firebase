@@ -38,9 +38,11 @@ h1{
 }
  
 .carousel{
-    max-width: 100%;
-    & .carousel img{
-        object-fit: contain;
+    max-width: 90%;
+    margin: auto;
+    & img{
+        object-fit: cover;
+        padding-left:20px;
     }
 }
 

@@ -62,7 +62,7 @@ function carousel(selector, data) {
 
     $(element).slick({
         centerMode: false,
-        centerPadding: '40px',
+        slidesToScroll: 1,
         slidesToShow: 5,
         adaptiveHeight: true,
         speed:1000,
@@ -71,32 +71,35 @@ function carousel(selector, data) {
         autoplaySpeed:1200,
         arrows: true,
         infinite: true,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        swipeToSlide: true,
         responsive: [
             {
                 breakpoint: 1650,
                 settings: {
-                    centerPadding: '20px',
+ 
                     slidesToShow: 4,
                 }
             },
             {
                 breakpoint: 1250,
                 settings: {
-                    centerPadding: '40px',
+
                     slidesToShow: 3,
                 }
             },
             {
                 breakpoint: 850,
                 settings: {
-                    centerPadding: '40px',
+    
                     slidesToShow: 2,
                 }
             },
             {
                 breakpoint: 650,
                 settings: {
-                    centerPadding: '40px',
+
                     slidesToShow: 1,
                 }
             }

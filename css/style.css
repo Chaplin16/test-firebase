@@ -49,10 +49,12 @@ h1 {
 }
 
 .carousel {
-  max-width: 100%;
+  max-width: 90%;
+  margin: auto;
 }
-.carousel .carousel img {
-  object-fit: contain;
+.carousel img {
+  object-fit: cover;
+  padding-left: 20px;
 }
 
 .text {
