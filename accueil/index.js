@@ -1,14 +1,14 @@
 let user = JSON.parse(localStorage.getItem("user"));
 let connect = document.getElementById("connect");
-let nameUser = document.getElementById("displayName");
+let pseudo = sessionStorage.getItem("pseudo")
+
 //appear username connected's name 
 if(user != null){
-   nameUser = nameUser != null ? nameUser : user.email
- console.log(user.displayName);
+    pseudo = pseudo != null ? pseudo : user.email
     connect.innerHTML = `   
     <div>
         <div id="user">
-            Bonjour ${nameUser}
+            Bonjour ${pseudo} 🙂
             <img id="navIcon" src="../images/icon-arrow-menu.png" alt="icone menu déroulant"> 
         </div>
         <div class="navConnect">
