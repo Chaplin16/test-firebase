@@ -31,19 +31,8 @@ imgSendCarousel.addEventListener('click', function(event) {
         const pathReference = ref(storage, pathImgCarousel);
         getDownloadURL(pathReference)
         .then((url) => {
-            // `url` is the download URL for 'images/stars.jpg'
-        
-            // This can be downloaded directly:
-            const xhr = new XMLHttpRequest();
-            xhr.responseType = 'blob';
-            xhr.onload = (event) => {
-              const blob = xhr.response;
-            };
-            xhr.open('GET', url);
-            xhr.send();
-        
-            // Or inserted into an <img> element
             carousel.setAttribute('src', url);
+            alert("Votre image a été insérée dans le carousel photo👍")
           })
           .catch((error) => {
             // Handle any errors
@@ -55,24 +44,3 @@ imgSendCarousel.addEventListener('click', function(event) {
 });
 
 
-// CHANGE PHOTO GALLERY
-let imgSendGallery = document.getElementById("imgSendGallery");
-
-imgSendGallery.addEventListener('click', function(event) {
-    const fileNameGalleryInput = document.getElementById('selectImgGallery');
-    const fileNameGallery = document.getElementById('selectImgGallery').files[0];
-    event.preventDefault();
-    function isValidName(e) {
-        return (/\.(png|jpeg|jpg|JPG|JPEG|PNG)$/i).test(e);
-    };
-
-    if (isValidName(fileNameGallery.name)){
-        alert(`votre fichier "${fileNameGallery.name}" est pris en compte`)
-        
-    }else{
-        alert(`Votre fichier image "${fileNameGallery.name}" doit être au format .jpg, .jpeg ou .png`);  
-    }
-
-    fileNameGalleryInput.value="";
-    
-})  
