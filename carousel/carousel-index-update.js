@@ -1,6 +1,6 @@
 // CHANGE PHOTOS CAROUSEL
 import { getStorage, ref, uploadBytes } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-storage.js";
-
+import { storage } from "../service/firebase.js";
 let imgSendCarousel = document.getElementById("imgSendCarousel");
 
 imgSendCarousel.addEventListener('click', function(event) {
@@ -12,19 +12,23 @@ imgSendCarousel.addEventListener('click', function(event) {
     };
     if (isValidName(fileName.name)){
         alert(`votre fichier "${fileName.name}" est pris en compte`)
+        fileNameInput.value = "";
+
+        const storage = getStorage();
+        const storageRef = ref(storage);
+        const filesRef = ref(storageRef, `carousel`);
+        const img = `${fileName.name}`;
+        const imagesCarouselRef = ref(filesRef, img);
         
+        imagesCarouselRef.fullPath; //permet de connaître le chemin du dossier et de l image enregistrée
+
+        uploadBytes(imagesCarouselRef, img).then((snapshot) => {
+            console.log('Images dans le cloud store');
+        });
+  
     }else{
         alert(`Votre fichier image "${fileName.name}" doit être au format .jpg, .jpeg ou .png`);  
-    }
-    
-    const storage = getStorage();
-    const storageRef = ref(storage, `carousel/${fileName}`);
-
-    uploadBytes(storageRef, file).then((snapshot) => {
-        console.log('Uploaded a blob or file!');
-      });
-
-    fileNameInput.value = " "
+    } 
 });
 
 

@@ -1,6 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js";
 import { getFirestore } from 'https://cdnjs.cloudflare.com/ajax/libs/firebase/9.16.0/firebase-firestore-lite.min.js';
 import { getAuth } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js";
+import { getStorage } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-storage.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyBgqAF4dI6X_VGuLTxBvv0c-hJ5ZX0wj1I",
@@ -17,5 +18,5 @@ const app = initializeApp(firebaseConfig);
 const firebase = getFirestore(app);
 // Initialize Firebase Authentication and get a reference to the service
 const auth = getAuth(app);
-
-export { app, auth, firebase };
+const storage = getStorage(app);
+export { app, auth, firebase, storage };
