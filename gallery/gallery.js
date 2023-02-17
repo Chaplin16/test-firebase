@@ -30,12 +30,15 @@ imgSendGallery.addEventListener('click', function(event) {
         });
 
         //return files in application
-        const pathImgGallery = `gallery/${img}`;
+        const pathImgGallery = 'gallery' + '/' + `${img}`;
         const pathReference = ref(storage, pathImgGallery);
         getDownloadURL(pathReference)
         .then((url) => {
-            gallery.setAttribute('src', url);
-            alert("Votre image a été insérée dans le carousel photo👍")
+            //gallery.setAttribute('src', url);
+            let img = document.createElement("img");
+            img.src = url;
+            gallery.appendChild(img);
+            alert(`Votre image ${img} a été insérée dans la gallerie photo👍`)
           })
           .catch((error) => {
             // Handle any errors

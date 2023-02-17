@@ -71,8 +71,9 @@ h1 {
   row-gap: 10px;
 }
 .vitrine img {
-  width: 200px;
-  height: auto;
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 8px;
   box-shadow: 3px 3px 3px #123456;
 }
