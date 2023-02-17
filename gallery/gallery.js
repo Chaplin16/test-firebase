@@ -1,5 +1,6 @@
 // CHANGE PHOTOS GALLERY
-import { getStorage, ref, uploadString, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-storage.js";
+import { getStorage, ref, uploadString, getDownloadURL, listAll } from "https://www.gstatic.com/firebasejs/9.16.0/firebase-storage.js";
+import { firebase } from "../service/firebase.js";
 import { storage } from "../service/firebase.js";
 
 // CHANGE PHOTO GALLERY
@@ -32,35 +33,19 @@ imgSendGallery.addEventListener('click', async function(event) {
         }
         
         const imgConvert = await convertImg();
-
-        //upload files in storage
+        const img = `${fileNameGallery.name}`;     
         const storage = getStorage();
         const storageRef = ref(storage);
-        const filesRef = ref(storageRef, `gallery`);
-        const img = `${fileNameGallery.name}`;
-        
-        const imagesGalleryRef = ref(filesRef, img);
-        imagesGalleryRef.fullPath; //permet de connaître le chemin du dossier et de l image enregistrée
-
-        await uploadString(imagesGalleryRef, imgConvert, 'data_url') 
-
-        //return files in application
-        const pathImgGallery = 'gallery' + '/' + `${imgConvert}`;
-        const pathReference = ref(storage, pathImgGallery);
-        //const downloadURL= await getDownloadURL(pathReference)
+        const imagesGalleryRef = ref(storage, `gallery/${img}`);
+    
+        const uploadResult = await uploadString(imagesGalleryRef, imgConvert, 'data_url');
+        const downloadURL= await getDownloadURL(uploadResult.ref);
         const newImg = document.createElement("img");
-        newImg.src = pathReference;
-
-
+        newImg.src = downloadURL;    
         gallery.appendChild(newImg);
-        alert(`Votre image ${newImg} a été insérée dans la gallerie photo👍`)
-          
-       
 
     }else{
-        alert(`Votre fichier image "${fileNameGallery.name}" doit être au format .jpg, .jpeg ou .png`);  
+        alert(`Votre fichier image ${fileNameGallery.name} doit être au format .jpg, .jpeg ou .png`);  
     }
-
-    
 })  
 
